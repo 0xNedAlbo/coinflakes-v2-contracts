@@ -1,0 +1,40 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"command": "forge test -vvv",
+			"problemMatcher": [],
+			"label": "forge: test",
+			"detail": "Run forge test command"
+		},
+		{
+			"type": "shell",
+			"command": "forge test -vvv --mt \"_only\"",
+			"problemMatcher": [],
+			"label": "forge: test 'only'",
+			"detail": "Run forge test command for only keyword"
+		},
+		{
+			"type": "shell",
+			"command": "forge test -vvv --mp \"test/bmx/**/*\"",
+			"problemMatcher": [],
+			"label": "forge: test BMX protocol",
+			"detail": "Run forge test command for BMX protocol only",
+		},
+		{
+			"type": "shell",
+			"command": "anvil --accounts 2 --balance 300",
+			"problemMatcher": [],
+			"label": "anvil: start",
+			"detail": "Run local EVM enviroment"
+		},
+		{
+			"type": "shell",
+			"command": "forge script scripts/Flaix.deploy-local.sol:FlaixDeployLocal --fork-url http://localhost:8545 --broadcast",
+			"problemMatcher": [],
+			"label": "forge: deploy on localhost",
+			"detail": "Deploy Flaix contract on localhost"
+		}
+	]
+}
