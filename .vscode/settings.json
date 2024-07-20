@@ -8,8 +8,16 @@
     "solidity.compileUsingRemoteVersion": "v0.8.16",
     "solidity.formatter": "forge",
     "workbench.colorCustomizations": {
-        "activityBar.background": "#47222F",
+        "activityBar.background": "#642F41",
         "titleBar.activeBackground": "#642F41",
         "titleBar.activeForeground": "#FCF9FA"
     },
+    "solidity.defaultCompiler": "localFile",
+    "solidity.remappings": [
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/",
+        "@openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        "@src/=src/",
+        "@test/=test/"
+    ]
 }
