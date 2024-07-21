@@ -31,6 +31,7 @@ contract SimpleVaultStrategy is ERC4626 {
         if (from == address(0x0)) {
             IERC20 asset = IERC20(vault.asset());
             uint256 underlyingBalance = asset.balanceOf(address(this));
+            asset.approve(address(vault), underlyingBalance);
             vault.deposit(underlyingBalance, address(this));
         }
         super._afterTokenTransfer(from, to, amount);

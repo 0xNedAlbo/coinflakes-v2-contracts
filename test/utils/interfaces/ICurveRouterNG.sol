@@ -10,4 +10,13 @@ interface ICurveRouterNG {
         address[5] memory pools,
         address receiver
     ) external;
+
+    function get_dx(
+        address[11] memory routes,
+        uint256[5][5] memory swapParams,
+        uint256 outAmount,
+        address[5] memory pools,
+        address[5] memory base_pools,
+        address[5] memory base_tokens
+    ) external view returns (uint256);
 }
