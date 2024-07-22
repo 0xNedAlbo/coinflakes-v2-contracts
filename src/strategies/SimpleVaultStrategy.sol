@@ -4,14 +4,12 @@ pragma solidity ^0.8.0;
 import "@openzeppelin-contracts/contracts/interfaces/IERC20.sol";
 import "@openzeppelin-contracts/contracts/interfaces/IERC4626.sol";
 import "@openzeppelin-contracts/contracts/token/ERC20/extensions/ERC4626.sol";
-import "@tokenized-strategy/TokenizedStrategy.sol";
+import "@tokenized-strategy/BaseStrategy.sol";
 
-contract SimpleVaultStrategy is TokenizedStrategy {
+contract SimpleVaultStrategy is BaseStrategy {
     IERC4626 public vault;
 
-    constructor(string memory name_, string memory symbol_, IERC4626 vault_, IERC20 asset_)
-        
-    {
+    constructor(string memory name_, string memory symbol_, IERC4626 vault_, IERC20 asset_) {
         vault = vault_;
     }
 
