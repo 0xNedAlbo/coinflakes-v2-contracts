@@ -4,7 +4,7 @@ out = 'out'
 script = 'scripts'
 libs = ['lib']
 allow_paths = ['lib']
-solc = "0.8.16"
+solc = "0.8.24"
 viaIR = true
 
 [rpc_endpoints]
